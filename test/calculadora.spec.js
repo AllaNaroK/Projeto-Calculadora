@@ -5,7 +5,7 @@ import Calculadora from '../src/Calculadora.js'
 const expect = chai.expect
 
 describe('+ Testes de Soma +', () => {
-    it('Deve somar 15 e 5 quatro vezes, resultando em 20', () => {
+    it('Deve somar 15 e 5 quatro vezes, resultando em 35', () => {
         let resultado = Calculadora.soma(15, 5, 5, 5, 5)
         expect(resultado).to.be.equals(35)})
     it('Deve somar -4 e 5 resultando em 1', () => {
@@ -45,10 +45,10 @@ describe('/ Testes de Divisão /', () => {
     it('Deve dividir 2000 por 2 quatro vezes subsequentes, resultando em 125', () => {
         let resultado = Calculadora.divisao(2000, 2, 2, 2, 2)
         expect(resultado).to.be.equals(125)})
-    it('Deve dividir 5 por 10 resultando em 0.5', () => {
+    it('Deve dividir -27 por 10 resultando em -2,7', () => {
         let resultado = Calculadora.divisao(-27, 10)
         expect(resultado).to.be.equals(-2.7)})
-    it('Deve dividir 63 por -57 acertando o resultando em 6, além de não ser do tipo "null"', () => {
+    it('Deve dividir 63 por -57 acertando o resultando em -1.10526..., além de não ser do tipo "null"', () => {
         let resultado = Calculadora.divisao(63, -57)
         expect(resultado).to.be.equals(-1.105263157894737).and.not.to.be.a('null')})
 })
@@ -74,20 +74,17 @@ describe('! Testes de Exponenciação !', () => {
 describe('△ Geometria Euclidiana △', () => {
     it('Deve resultar em no máximo 180, ou, não irá executar (erro de forma proposital). Neste caso, deve retornar 30', () => {
         let resultado = Calculadora.geometriaeuclediana(10,10,10)
-        expect(resultado).to.be.equals(30)
-    })
+        expect(resultado).to.be.equals(30)})
 })
 
 describe('◯ Área da Circunferência ◯', () => {
     it('Deve calcular a área de uma circunferência seguindo a fórmula "Circunferência = 2 * 𝜋 * Raio", onde adicionamos o Raio de 25, resultando em 157', () => {
         let resultado = Calculadora.circunferencia(25)
-        expect(resultado).to.be.equals(157)
-    })
+        expect(resultado).to.be.equals(157)})
 }) 
 
 describe('🌎 Terra à Lua (a pé) 🌎', () => {
     it('Primeiro, é preciso medir o tamanho do seu passo em metros. Sabendo tal resultado, a função será dada pela divisão do cumprimento do seu passo em KM/Metros e multiplicado pela distância (em KM) entre a Terra e a Lua, resultado em 446M.967K.744 Passos. Obs: E, não sendo falso.', () => {
         let resultado = Calculadora.distanciaterralua(0.86)
-        expect(resultado).to.be.equals(446976744).and.not.to.be.a('false')
-    })
+        expect(resultado).to.be.equals(446976744).and.not.to.be.a('false')})
 })
