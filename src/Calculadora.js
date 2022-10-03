@@ -6,7 +6,6 @@ export default class Calculadora {
             return a+b+c+d+e
         else
             return a+b
-
     }
 
     static subtracao(a,b,c,d,e){
